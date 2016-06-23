@@ -10,4 +10,15 @@ describe 'git' do
   describe file(File.join(git_base, 'bin', 'git')) do
     it { should be_file }
   end
+
+  describe file(File.join(git_base, 'contrib')) do
+    it { should be_directory }
+  end
+
+  describe file(File.join(git_base,
+                          'contrib',
+                          'diff-highlight',
+                          'diff-highlight')) do
+    it { should be_file }
+  end
 end
